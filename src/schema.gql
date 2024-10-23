@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: Int!
+  description: String!
+  done: Boolean!
+}
+
+type Query {
+  """Esta es una descripcion de lo que hace este resolver"""
+  helloWorldRename: String!
+
+  """Retorna un numero"""
+  randomNumber: Float!
+
+  """from zero to argument to"""
+  randomFromZeroTo(to: Int): Int!
+  todos: [Todo!]!
+  todo(id: Int!): Todo!
+}
+
+type Mutation {
+  crearTodo(CreateTodoInput: CreateTodoInput!): Todo!
+}
+
+input CreateTodoInput {
+  """What needs to be done"""
+  description: String!
+}
